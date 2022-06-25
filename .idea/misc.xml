@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/close_button_state.xml" value="0.287" />
+        <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/style_button.xml" value="0.287" />
+        <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/style_close_button.xml" value="0.287" />
+        <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/style_close_button_normal.xml" value="0.287" />
+        <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/style_close_button_pressed.xml" value="0.287" />
         <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/drawable/style_timer.xml" value="0.33" />
         <entry key="..\:/Users/sato/AndroidStudioProjects/pomodoro/app/src/main/res/layout/activity_main.xml" value="0.32760416666666664" />
       </map>
