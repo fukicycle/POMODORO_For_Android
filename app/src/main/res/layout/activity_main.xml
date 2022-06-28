@@ -28,6 +28,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/prevButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_button"
@@ -44,6 +45,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/nextButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_button"
@@ -68,6 +70,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/startButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_button"
@@ -76,6 +79,7 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/pauseButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_button"
@@ -84,6 +88,7 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/resetButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/style_button"
@@ -101,9 +106,9 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:text="Task list"
-            android:layout_gravity="center"
             android:textColor="@color/secondary700"
             android:textStyle="bold" />
 
