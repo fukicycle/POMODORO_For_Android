@@ -5,26 +5,33 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import com.example.pomodoro.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), NotifyChange {
+class MainActivity : AppCompatActivity() {
     private lateinit var b: ActivityMainBinding
-    private var timer = Timer(FIRST, INTERVAL, this, TaskEnum.FIRST)
+    private lateinit var sequenceManager:SequenceManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.apply {
+            sequenceManager = SequenceManager(timerTextView,displayTextView)
             startButton.setOnClickListener {
-                timer.start()
+                sequenceManager.start()
             }
+
             pauseButton.setOnClickListener {
-                timer.cancel()
+                sequenceManager.pause()
+            }
+
+            resetButton.setOnClickListener {
+                sequenceManager.reset()
+            }
+
+            prevButton.setOnClickListener {
+                sequenceManager.prev()
+            }
+
+            nextButton.setOnClickListener {
+                sequenceManager.next()
             }
         }.root)
-    }
-
-    override fun finish(task: TaskEnum) {
-    }
-
-    override fun tick(sec: Long) {
-        b.timerTextView.text = sec.toString()
     }
 }
