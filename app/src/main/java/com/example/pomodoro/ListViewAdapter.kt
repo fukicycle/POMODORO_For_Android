@@ -30,8 +30,13 @@ class ListViewAdapter(
                 R.layout.list_task_list -> {
                     val item = items[p0] as Task
                     taskCheckBox.text = item.name
-                    if(item.isDone) root.background = context.getDrawable(R.drawable.style_task_list_done)
-
+                    taskCheckBox.isChecked = item.isDone
+                    if (item.isDone) root.background =
+                        context.getDrawable(R.drawable.style_task_list_done)
+                    taskCheckBox.setOnCheckedChangeListener { compoundButton, b ->
+                        item.isDone = !item.isDone
+                        notifyDataSetChanged()
+                    }
                 }
             }
         }.root
