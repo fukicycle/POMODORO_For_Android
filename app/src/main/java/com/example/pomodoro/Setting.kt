@@ -1,5 +1,7 @@
 package com.example.pomodoro
 
+import java.sql.Struct
+
 const val FIRST = 25 * 60L
 const val SECOND = 25 * 60L
 const val THIRD = 25 * 60L
@@ -7,6 +9,13 @@ const val FOURTH = 25 * 60L
 const val BREAK = 5 * 60L
 const val L_BREAK = 15 * 60L
 const val INTERVAL = 1L
+
+const val DB_NAME = "pomodoro_db"
+const val TABLE_NAME = "task_tbl"
+const val COLUMN_ID = "id"
+const val COLUMN_NAME = "name"
+const val COLUMN_DONE = "isDone"
+const val COLUMN_DATE = "date"
 
 fun getMillSecFromEnum(taskEnum: TaskEnum): Long {
     return when (taskEnum) {
