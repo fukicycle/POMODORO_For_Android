@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.apply {
-            sequenceManager = SequenceManager(timerTextView, displayTextView)
+            sequenceManager = SequenceManager(this@MainActivity,timerTextView, displayTextView)
             taskListView.adapter = adapter
             startButton.setOnClickListener {
                 sequenceManager.start()

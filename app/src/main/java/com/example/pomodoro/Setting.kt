@@ -1,13 +1,19 @@
 package com.example.pomodoro
 
-import java.sql.Struct
-
-const val FIRST = 25 * 60L
+/*const val FIRST = 25 * 60L
 const val SECOND = 25 * 60L
 const val THIRD = 25 * 60L
 const val FOURTH = 25 * 60L
 const val BREAK = 5 * 60L
 const val L_BREAK = 15 * 60L
+const val INTERVAL = 1L*/
+
+const val FIRST = 1 * 60L
+const val SECOND = 1 * 60L
+const val THIRD = 1 * 60L
+const val FOURTH = 1 * 60L
+const val BREAK = 2 * 60L
+const val L_BREAK = 3 * 60L
 const val INTERVAL = 1L
 
 const val DB_NAME = "pomodoro_db"

@@ -1,8 +1,13 @@
 package com.example.pomodoro
 
+import android.content.Context
 import android.widget.TextView
 
-class SequenceManager(private val timerTextView: TextView, private val displayTextView: TextView) :
+class SequenceManager(
+    private val context: Context,
+    private val timerTextView: TextView,
+    private val displayTextView: TextView
+) :
     NotifyChange {
     private var timer = Timer(getMillSecFromEnum(TaskEnum.FIRST), INTERVAL, this, TaskEnum.FIRST)
     private var currentSec = 0L
@@ -11,7 +16,9 @@ class SequenceManager(private val timerTextView: TextView, private val displayTe
     private var nextTask = TaskEnum.BREAK
     private var isPause = false
     private var isRun = false
+    private val notificationManager = NotificationManager(context)
     override fun finish(task: TaskEnum) {
+        notificationManager.set()
         isRun = false
         next()
         start()
